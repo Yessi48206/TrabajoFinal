@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = () => {
     return (
-        <div>
+        <div className='footerSection'>
             <h1>pagina de error</h1>
         </div>
     );

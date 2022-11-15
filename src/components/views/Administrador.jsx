@@ -2,7 +2,7 @@ import React from 'react';
 
 const Administrador = () => {
     return (
-        <div>
+        <div className='footerSection'>
             <h1>Administrador</h1>
         </div>
     );
