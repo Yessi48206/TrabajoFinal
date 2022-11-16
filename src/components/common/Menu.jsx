@@ -23,8 +23,10 @@ const Menu = () => {
                 Nuestras Pintas
               </NavDropdown.Item>
             </NavDropdown>
+            <section className="d-flex content-justify-between">
             <Nav.Link end as={NavLink} to="/registar">Registrar</Nav.Link>
             <Nav.Link end as={NavLink} to="/login">Login</Nav.Link>
+            </section>
           </Nav>
         </Navbar.Collapse>
       </Container>
