@@ -1,0 +1,10 @@
+.imagen {
+    background-image: url("./imagen11.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.borde{
+    border-radius: 50px;
+    border: none;
+}
