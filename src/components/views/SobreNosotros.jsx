@@ -1,8 +1,8 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import avatarYessi from '../img/avatarYessica.jpg'
-import avatarDai from '../img/avatarDaiana.jpg'
+import avatarDai from '../img/avatarYessica.jpg'
+import avatarYessi from '../img/avatarDaiana.jpg'
 
 const SobreNosotros = () => {
     return (
@@ -25,7 +25,7 @@ const SobreNosotros = () => {
         <Row  className='container text-center'>
         <Col  className='mb-5 img' >
         <aside >
-            <img src={avatarYessi} alt=" avatar de yessica" className='borde' />
+            <img src={avatarDai} alt=" avatar de yessica" className='borde' />
             <h3 className='text-light'>Daiana Leiva</h3>
             <a href='https://www.facebook.com/daiana.leiva.547?mibextid=ZbWKwL'> <ion-icon name="logo-facebook" className='iconos'></ion-icon></a>
            <a href='https://instagram.com/dayleiva92?igshid=YmMyMTA2M2Y='> <ion-icon name="logo-instagram"></ion-icon></a>
@@ -34,7 +34,7 @@ const SobreNosotros = () => {
         </Col>
         <Col className='mb-5 img' >
         <aside>
-            <img src={avatarDai} alt="avatar de daiana" className='borde' />
+            <img src={avatarYessi} alt="avatar de daiana" className='borde' />
             <h3 className='text-light '>Yessica Juarez</h3>
             <a href='https://www.facebook.com/profile.php?id=100009693700369&mibextid=ZbWKwL'><ion-icon name="logo-facebook" ></ion-icon></a>
            <a href='https://instagram.com/yesiiijuarezz?igshid=YmMyMTA2M2Y='> <ion-icon name="logo-instagram"></ion-icon></a>
