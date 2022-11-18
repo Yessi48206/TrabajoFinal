@@ -1,29 +1,47 @@
 import React from 'react';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import avatarYessi from '../img/avatarYessica.jpg'
+import avatarDai from '../img/avatarDaiana.jpg'
 
 const SobreNosotros = () => {
     return (
         <>
         
-        <section className='imagen footerSection'>
-         <h2 class="display-3 text-center text-light letra">Sobre Nosotros</h2>
-        <hr class="text-light" />
+        <section className='imagenFondo footerSection'>
+         <h2 className="display-3 text-center text-light letra">Sobre Nosotros</h2>
+        <hr className='text-light' />
         
         <h2 class="text-light text-center ">
         Somos dos chicas  estudiantes perteneciente a la academia de Rolling Code School.
         Trabajamos juntas para diseñar, crear y producir una pagina de un bar, cuyo objetivo es
          brindar una plataforma eficiente, elegida por los usuarios.</h2>
+         <hr className='text-light' />
          <h3 class="text-light text-center mt-2">Una frase que nos identifica</h3>
-        <h5 class="text-light text-center my-5">
+        <h2 class="text-light text-center my-5">
         El trabajo en equipo nos enriquece como profesionales, dandonos
         perspectivas que tal vez nunca hubieramos pensados.
-        </h5>
-        
-        <aside className='container'>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTXHcokjUs_j_MexyxtUtwPBu6ltQ8JzxsSygJVi1q&s" alt="" className='borde' />
+        </h2>
+        <Row  className='container text-center'>
+        <Col  className='mb-5 img' >
+        <aside >
+            <img src={avatarYessi} alt=" avatar de yessica" className='borde' />
+            <h3 className='text-light'>Daiana Leiva</h3>
+            <a href='https://www.facebook.com/daiana.leiva.547?mibextid=ZbWKwL'> <ion-icon name="logo-facebook" className='iconos'></ion-icon></a>
+           <a href='https://instagram.com/dayleiva92?igshid=YmMyMTA2M2Y='> <ion-icon name="logo-instagram"></ion-icon></a>
+            <a href='https://github.com/JDayLeiva'><ion-icon name="logo-github"></ion-icon></a>
         </aside>
-        <aside className='container'>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTXHcokjUs_j_MexyxtUtwPBu6ltQ8JzxsSygJVi1q&s" alt="" className='borde' />
+        </Col>
+        <Col className='mb-5 img' >
+        <aside>
+            <img src={avatarDai} alt="avatar de daiana" className='borde' />
+            <h3 className='text-light '>Yessica Juarez</h3>
+            <a href='https://www.facebook.com/profile.php?id=100009693700369&mibextid=ZbWKwL'><ion-icon name="logo-facebook" ></ion-icon></a>
+           <a href='https://instagram.com/yesiiijuarezz?igshid=YmMyMTA2M2Y='> <ion-icon name="logo-instagram"></ion-icon></a>
+           <a href='https://github.com/'><ion-icon name="logo-github"></ion-icon></a>
         </aside>
+        </Col>
+        </Row>
         </section>
         </>
         
