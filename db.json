@@ -1,0 +1,25 @@
+{
+    "productos":[
+        {
+            "nombreProducto":"pizza",
+            "precio":500,
+            "categoria":"fugazzeta",
+            "imagen":"https://www.paulinacocina.net/wp-content/uploads/2017/04/3-640x480.jpg",
+            "id":1
+        },
+        {
+            "nombreProducto":"pinta",
+            "precio":650,
+            "categoria":"cerveza",
+            "imagen":"https://www.paulinacocina.net/wp-content/uploads/2017/04/3-640x480.jpg",
+            "id":2
+        },
+        {
+            "nombreProducto":"papas",
+            "precio":600,
+            "categoria":"papas gratinadas",
+            "imagen":"https://www.paulinacocina.net/wp-content/uploads/2017/04/3-640x480.jpg",
+            "id":3
+        }
+    ]
+}
