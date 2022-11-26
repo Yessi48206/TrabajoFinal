@@ -1,8 +1,8 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import avatarDai from '../img/avatarYessica.jpg'
-import avatarYessi from '../img/avatarDaiana.jpg'
+import avatarDai from './img/avatarDaiana.jpg'
+import avatarYessi from './img/avatarYessica.jpg'
 
 const SobreNosotros = () => {
     return (
