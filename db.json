@@ -1,0 +1,18 @@
+{
+    "usuarios": [
+        {
+          "usuario": "yessica",
+          "email": "yeye@mail.com",
+          "password": "12345678",
+          "id": 1
+        }
+    ],
+    "administrador":[
+      {
+      "usuario": "yeesica",
+      "email": "yeye@mail.com",
+      "password": "12345678",
+      "id": 1
+      }
+    ]
+}

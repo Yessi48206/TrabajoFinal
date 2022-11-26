@@ -10,18 +10,20 @@ import Login from "./components/views/Login";
 import Registro from "./components/views/Registro";
 import SobreNosotros from "./components/views/SobreNosotros";
 import"./components/views/sobreNotros.css"
-
+import { useState } from "react";
 function App() {
+  const usuario = JSON.parse(localStorage.getItem("tokenUsuario")) || {};
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
   return (
     <BrowserRouter>
-    <Menu></Menu>
+    <Menu  usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
         <Routes>
            <Route exact path="/" element={<Inicio></Inicio>}></Route>
            <Route exact path="/administrar" element={<Administrador></Administrador>}></Route>
-           <Route exact path="*" element={<Error></Error>}></Route>
-           <Route exact path="/login" element={<Login></Login>}></Route>
-           <Route exact path="/registar" element={<Registro></Registro>}></Route>
+           <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
+           <Route exact path="/registar" element={<Registro setUsuarioLogueado={setUsuarioLogueado}></Registro>}></Route>
            <Route exact path="/sobreNosotros" element={<SobreNosotros></SobreNosotros>}></Route>
+           <Route exact path="*" element={<Error></Error>}></Route>
         </Routes>
     <Footer></Footer>
     </BrowserRouter>

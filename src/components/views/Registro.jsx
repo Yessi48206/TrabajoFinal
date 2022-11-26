@@ -1,17 +1,41 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { crearUsuario } from "../helpers/queries";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-const Registro = () => {
+const Registro = ({setUsuarioLogueado}) => {
+  
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = (datos) => {
     console.log(datos);
+    crearUsuario(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire(
+          `Usuario creado`,
+          `El usuario ${datos.usuario} se creo correctamente`,
+          "success"
+        );
+        reset()
+      } else {
+        Swal.fire(
+          `Hubo un error inesperado`,
+          "Intentelo nuevamente en breve.",
+          "error"
+          );
+        }
+      });
+    
   };
+  
   return (
     <div className=" footerSection regifoot ">
       <div className="row justify-content-center">

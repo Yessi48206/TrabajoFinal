@@ -1,16 +1,39 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { login } from "../helpers/queries";
+import { useNavigate } from "react-router-dom";
 
-
-const Login = () => {
+const Login = ({ setUsuarioLogueado }) => {
+  
+  const navigate = useNavigate();
     const{
         register,
         handleSubmit,
         formState:{ errors},
     } = useForm();
+
     const onSubmit= (datos)=>{
         console.log(datos)
-    }
+        login(datos).then((respuesta) => {
+          console.log(respuesta);
+          if (respuesta.status === 200) {
+            //almaceno el usuario en el state y localstorage
+            localStorage.setItem("tokenUsuario", JSON.stringify(respuesta));
+            setUsuarioLogueado(respuesta);
+            // si el usuario es correcto entonces redirecciono al admin
+            navigate("/");
+          } else {
+            Swal.fire(
+              "El usuario no existe",
+              "error en el nombre de usuario o password",
+              "error"
+            );
+          }
+        });
+      };
+
+
     return (
         <>
         <section className="regifoot footerSection">
