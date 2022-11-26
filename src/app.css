@@ -37,7 +37,3 @@ cursor: pointer;
     filter:opacity(90%);
     transition: all 300ms;
 }
-.botonInicio{
-    display: flex;
-    
-}

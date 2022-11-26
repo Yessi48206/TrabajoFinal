@@ -1,5 +1,5 @@
 .imagenFondo {
-    background-image: url("../img/imagen11.jpg");
+    background-image: url("./img/imagen11.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
